@@ -1,28 +1,24 @@
 @extends('layout.principal')
 @section('content')
 
-<h1>Novo Produto</h1>
+<h1>Nova Venda</h1>
 
-<form action="/produtos/adicionar" method="post">
+<form action="/vendas/adicionar" method="post">
     <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
     <dir class="form-group">
-        <label>Nome</label>
-        <input type="text" name="nome" class="form-control">
-    </dir>
-    <dir class="form-group">
-        <label>Descrição</label>
-        <input type="text" name="descricao" class="form-control">
-    </dir>
-    <dir class="form-group">
-        <label>Valor</label>
-        <input type="text" name="valor" class="form-control">
+        <label>Escolha o Produto</label>
+        <select name="id_produtos" class="form-control">
+        @foreach($produtos as $p)
+          <option value="{{$p->id}}">{{$p->nome}}</option>
+        @endforeach
+        </select>
     </dir>
     <dir class="form-group">
         <label>Quantidade</label>
         <input type="number" name="quantidade" class="form-control">
     </dir>
     <button type="submit" class="btn btn-primary btn-block">
-        Adicionar
+        Efetuar Venda
     </button>
 </form>
 

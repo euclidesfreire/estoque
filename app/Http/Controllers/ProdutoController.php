@@ -69,7 +69,7 @@ class ProdutoController extends Controller
 	public function remove($id){
 		$produto = Produto::find($id);
 		$produto->delete();
-
+	
 		return redirect()->action('ProdutoController@lista');
 	}
 

@@ -33,11 +33,11 @@
     		          <span class="glyphicon glyphicon-search"></span>
     				</a>
     			</td>
-                <td>
-                    <a href="/produtos/remove/{{$p->id}}">
-                      <span class="glyphicon glyphicon-trash"></span>
-                    </a>
-                </td>
+				<td>
+    				<a href="/produtos/remove/{{$p->id}}">
+    		          <span class="glyphicon glyphicon-trash"></span>
+    				</a>
+    			</td>
                 <td>
                     <a href="/produtos/editar/{{$p->id}}">
                       <span class="glyphicon glyphicon-pencil"></span>

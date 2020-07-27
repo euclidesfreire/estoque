@@ -3,7 +3,7 @@
 
 <h1>Editar Produto</h1>
 
-<form action="/produto/update" method="post">
+<form action="/produtos/update" method="post">
     <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
     <input type="hidden" name="id" value="{{{ $p->id }}}" />
     <dir class="form-group">
